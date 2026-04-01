@@ -1,0 +1,21 @@
+{% set image = block.image.one %}
+
+<section class="image-text mb-8 mt-8">
+  <div class="lg:container px-4 md:grid md:grid-cols-5 md:gap-6">
+    <div class="col-span-2 mb-4 md:mb-0 {{ block.imageAlignment }}" style="max-width:{{ image.getWidth('homePageImage')}}px;">
+      {% if block.imageLink is not empty %}
+        <a href="{{ block.imageLink }}" title="{{ image.title }}">
+      {% endif %}
+        <img class="img-thumbnail img-border" src="{{ image.width > image.getWidth('homePageImage') ? image.url('homePageImage') : image.url() }}" alt="{{ image.title }}" />
+      {% if block.imageLink is not empty %}
+        </a>
+      {% endif %}
+      {% if block.caption is not empty %}
+        <p class="caption">{{ block.caption }}</p>
+      {% endif %}
+    </div>
+    <div class="text col-span-3">
+      {{ block.richText }}
+    </div>
+  </div>
+</section>

@@ -1,10 +1,14 @@
-<div id="page-wrap">
+<div id="page-wrap" class="bg-brand-gray-light">
   {% block headerContent %}
     {% include '_partials/header' %}
   {% endblock %}
 
-  {% block subNavMobile %}
-    {% include '_partials/nav/subMobile' %}
+  {% block hero %}
+    {% include "_partials/heroSub" %}
+  {% endblock %}
+
+  {% block intro %}
+    {% include "_partials/intro" %}
   {% endblock %}
 
   <div class="px-4 xl:px-0 xl:container">

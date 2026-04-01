@@ -1,0 +1,18 @@
+{% if entry.intro|length %}
+  <section class="intro-section py-12 bg-white -mt-8 mb-8" id="start">
+    <div class="lg:container px-4">
+      <div class="intro">
+        <h1 class="main-heading">{{ pageHeading }}</h1>
+        {{ entry.intro }}
+      </div>
+    </div>
+  </section>
+{% else %}
+  <section class="intro-section py-12 bg-white -mt-8 mb-8" id="start">
+    <div class="lg:container px-4">
+      <div class="intro">
+        <h1 class="main-heading">{{ pageHeading }}</h1>
+      </div>
+    </div>
+  </section>
+{% endif %}

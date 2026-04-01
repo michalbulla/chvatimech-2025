@@ -5,10 +5,16 @@ html {
 
 @layer components {
   .main-heading {
-    @apply text-4xl font-semibold;
+    @apply text-4xl md:text-5xl font-secondary tracking-tight text-brand-green text-center mb-6;
   }
 
   .btn {
-    @apply inline-block uppercase mb-6 py-3 px-4 shadow;
+    @apply inline-block border-[3px] border-brand-green-light uppercase mb-6 pt-4 pb-3 px-6 rounded-full font-semibold text-brand-green-light hover:bg-brand-green-light hover:text-white shadow;
+  }
+
+  .intro-section {
+    p {
+      @apply text-xl text-center mb-4; 
+    }
   }
 }

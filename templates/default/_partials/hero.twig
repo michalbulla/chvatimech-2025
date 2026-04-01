@@ -1,0 +1,16 @@
+<div class="hero-section" style="background:linear-gradient(rgba(0,0,0, .3), rgba(0,0,0, .3)), url({{ entry.image.one.url('heroImage') }}) center center no-repeat;">
+  <div class="container">
+    <div class="hero h-[300px] md:h-auto">
+      <div class="hero-info">
+        <h1>{{ pageHeading }}</h1>
+        <p>{{ entry.kratkyPopis }}</p>
+        <div class="btn-wrap side-by-side">
+          <a href="#start" class="btn start-btn">Čítaj viac</a>
+        </div>
+        {# <div class="btn-wrap side-by-side">
+          <a href="{{ entry.shopUrl }}" target="_blank" class="btn shop">eShop</a>
+        </div> #}
+      </div>
+    </div>
+  </div>
+</div>

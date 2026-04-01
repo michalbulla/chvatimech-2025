@@ -1,9 +1,19 @@
 <footer>
-  <div class="mt-8 bg-gray-300">
-    <div class="xl:container">
-      <div class="p-2 md:p-4">
-        <p class="text-sm text-center">&copy;{{ 'now'|date('Y') }} {{ siteName }}. All Rights Reserved.</p>
-        {% include '_partials/signature' %}
+  <div class="lg:container px-4">
+    <div class="pt-8 md:grid md:grid-cols-2 md:gap-6 ">
+      <div class="adresa mb-8">
+        <h2 class="text-white text-2xl uppercase font-bold font-secondary mb-4">Rozhľadňa na kóte</h2>
+
+        <p class="phone text-white/90 mb-4 text-xl"><a href="tel:+421919347647">{{ svg("@webroot/img/icons/phone-alt-solid.svg")|attr({class: 'h-6 w-6 mr-2 inline-block'}) }} 0919 347 647</a></p>
+        <p class="email text-white/90 mb-4 text-xl"><a href="mailto:marcelgildein@yahoo.com">{{ svg("@webroot/img/icons/envelope-solid.svg")|attr({class: 'h-6 w-6 mr-2 inline-block'}) }} marcelgildein@yahoo.com</a></p>
+      </div>
+      <div>
+        <h2 class="text-white text-2xl uppercase font-bold font-secondary mb-4 ">Čo u nás nájdete</h2>
+        <ul>
+          {% for entry in siteOptions.mainNavigation.all %}
+            <li><a class="text-white/70 mb-2 block text-xl hover:underline hover:text-white" href="{{ entry.url }}">{{ entry.pageHeading }}</a></li>
+          {% endfor %}
+        </ul>
       </div>
     </div>
   </div>

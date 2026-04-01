@@ -6,7 +6,7 @@
 
 .redactor {
   p {
-    @apply mb-3 leading-6;
+    @apply mb-3 leading-6 text-lg;
 
     a {
       @apply text-content-link underline hover:no-underline;
@@ -21,7 +21,7 @@
 
 .default-content {
   p {
-    @apply mb-4;
+    @apply mb-4 text-lg;
   }
 
   p,
@@ -32,7 +32,7 @@
   }
 
   h2 {
-    @apply font-bold text-content-h2 text-3xl leading-tight mt-8 mb-3;
+    @apply font-bold text-content-h2 font-secondary text-3xl leading-tight mt-0 mb-3;
 
     + h3,
     + h4 {
@@ -191,7 +191,7 @@
 }
 
 .img-border {
-  @apply ring-2 ring-content-image-ring ring-offset-2;
+  @apply border border-brand-gray-light shadow-box;
 }
 
 // DOCUMENTS ----------------------------------------------------------------
